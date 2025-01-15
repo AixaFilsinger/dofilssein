@@ -11,3 +11,36 @@
 footer{
     background-color: #132f45;
 }
+
+.subrayado {
+    display: inline-block; /* Asegura que el borde se ajuste al texto */
+    border-bottom: 3px solid #286291; /* Línea subrayada de color y grosor personalizado */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+  }
+  .resaltado {
+    color: #286291;      
+    font-weight: bold; 
+  }
+
+.img-logo-about {
+    border: 1px solid #286291;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5); /* Sombra solo debajo */
+    border-radius: 10px; /* Opcional: para bordes redondeados */
+    transition: transform 0.3s; /* Animación suave al pasar el mouse */
+  }
+  
+  .img-logo-about:hover {
+    transform: translateY(-5px); /* Hace que "flote" un poco al pasar el mouse */
+  }
+  
+  .card-custom{
+    background-color: #286291;
+    width: 500px;
+    height: 500px;
+  }
+  .mission{
+    border-radius: 0 50% 50% 0;
+  }
+  .vision{
+    border-radius: 50% 0 0 50%;
+  }
