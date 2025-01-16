@@ -1,0 +1,89 @@
+:root {
+    --primary-color: #286291;
+    --background: white;
+    --card-background: #f9fbf2;
+    --form-background: #e8ebe4;
+    --footer-color: #132f45;
+    --title-background: #b8bacf;
+    --txt-p: black;
+
+    --h1-px: 2.5rem;
+    --h2-px: 1.5rem;
+    --h3-px: 1.25rem;
+    --h4-px: 1.125rem;
+    --h5-px: 1rem;
+    --h6-px: 0.875rem;
+    --p-px: 1.15rem;
+    --txtSmall-px: 0.75rem;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.875rem;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+    text-align: center;
+    background-color: var(--background);
+}
+
+.home-title {
+    font-size: var(--h1-px);
+    margin-bottom: 1rem;
+    line-height: 3.5rem;
+}
+
+.home-description {
+    font-size: var(--p-px);
+    margin-bottom: 1.5rem;
+    color: var(--txt-p);
+    margin-top: 1.875rem;
+    max-width: 30rem;
+}
+
+.txt-share{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.btn-cotz {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.875rem;
+    border-radius: 5px;
+    font-size: var(--h5-px);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cotz:hover {
+    background-color: var(--title-background);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tabletas */
+    .contenedor{
+    padding: 3rem;
+    }
+
+    .home-title{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Estilos para escritorios */
+    .contenedor{
+        padding: 4rem;
+    }
+
+    .home-title{
+        font-size: 3.313rem;
+        line-height: 4rem;
+    }
+}
+  
