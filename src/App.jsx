@@ -6,6 +6,7 @@ import Footer from "./components/common/Footer";
 import Inicio from "./components/views/Inicio";
 import About from "./components/views/About";
 import ContactUs from "./components/views/ContactUs";
+import Servicios from './components/views/Servicios';
 import { Container } from "react-bootstrap";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Menu></Menu>
       <section className="mainSection">
         <Inicio></Inicio>
+        <Servicios></Servicios>
         <About></About>
         <ContactUs></ContactUs>
       </section>
