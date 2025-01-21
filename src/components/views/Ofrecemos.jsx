@@ -16,7 +16,7 @@ const Ofrecemos = () => {
     margin: "0 auto",
     borderBottom: "3px solid #286291",
     marginTop: "10px",
-    animation: "subrayadoAnimacion 0.6s ease-in-out",
+    animation: "subrayadoAnimacion 1s ease-in-out",
   };
 
   const animationStyles = `
@@ -49,7 +49,7 @@ const Ofrecemos = () => {
     color: "#286291",
     marginBottom: "15px",
     fontSize: "1.75rem",
-    transition: "transform 0.5s ease, color 0.5s ease",
+    transition: "transform 1s ease, color 0.5s ease",
   };
 
   const cardBody = {
@@ -74,19 +74,19 @@ const Ofrecemos = () => {
       <style>
         {animationStyles}
         {`
-          .card-title:hover {
+          #cardtitle1:hover {
             transform: translateY(-5px);
             color: #286291;
           }
           
-          .card-title:hover::after {
+          #cardtitle1:hover::after {
             content: '';
             position: absolute;
             left: 0;
             bottom: -5px;
             height: 3px;
             background-color:#286291;
-            animation: subrayadoLento 0.5s forwards ease-out;
+            animation: subrayadoLento 1.5s forwards ease-out;
           }
         `}
       </style>
@@ -105,7 +105,7 @@ const Ofrecemos = () => {
           <Col xs={12}>
             <Card style={cardStyles}>
               <Card.Body style={cardBody}>
-                <Card.Title style={cardTitle} className="fs-4 card-title">
+                <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
                   1. Presupuesto sin costo
                 </Card.Title>
                 <Card.Text style={cardText} className="fs-5">
@@ -121,7 +121,7 @@ const Ofrecemos = () => {
           <Col xs={12}>
             <Card style={cardStyles}>
               <Card.Body style={cardBody}>
-                <Card.Title style={cardTitle} className="fs-4 card-title">
+                <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
                   2. SEO
                 </Card.Title>
                 <Card.Text style={cardText} className="fs-5">
@@ -137,7 +137,7 @@ const Ofrecemos = () => {
           <Col xs={12}>
             <Card style={cardStyles}>
               <Card.Body style={cardBody}>
-                <Card.Title style={cardTitle} className="fs-4 card-title">
+                <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
                   3. Google Analytics
                 </Card.Title>
                 <Card.Text style={cardText} className="fs-5">
@@ -153,7 +153,7 @@ const Ofrecemos = () => {
           <Col xs={12}>
             <Card style={cardStyles}>
               <Card.Body style={cardBody}>
-                <Card.Title style={cardTitle} className="fs-4 card-title">
+                <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
                   4. Velocidad
                 </Card.Title>
                 <Card.Text style={cardText} className="fs-5">
