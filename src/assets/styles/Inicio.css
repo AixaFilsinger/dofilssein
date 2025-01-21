@@ -20,10 +20,11 @@
 .contenedor {
     display: flex;
     justify-content: flex-start;
+    position: relative;
     padding: 1.875rem;
     align-items: center;
     flex-direction: column;
-    height: 65vh;
+    height: 90vh;
     text-align: center;
     background-color: var(--background);
 }
@@ -64,7 +65,7 @@
 }
 
 .btn-cotz:hover {
-    background-color: var(--form-background);
+    background: linear-gradient(45deg, #ffffff, #f0f4f8);
     color: var(--primary-color);
 }
 
