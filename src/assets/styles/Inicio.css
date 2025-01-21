@@ -23,7 +23,7 @@
     padding: 1.875rem;
     align-items: center;
     flex-direction: column;
-    height: 85vh;
+    height: 65vh;
     text-align: center;
     background-color: var(--background);
 }
@@ -54,13 +54,18 @@
     padding: 0.75rem 1.5rem;
     margin-top: 1.875rem;
     border-radius: 5px;
-    font-size: var(--h5-px);
+    font-size: var(--p-px);
     cursor: pointer;
     transition: background-color 0.3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .btn-cotz:hover {
-    background-color: var(--title-background);
+    background-color: var(--form-background);
+    color: var(--primary-color);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
