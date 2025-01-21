@@ -8,6 +8,7 @@ import About from "./components/views/About";
 import ContactUs from "./components/views/ContactUs";
 import Servicios from './components/views/Servicios';
 import Ofrecemos from "./components/views/Ofrecemos";
+import Elegirnos from "./components/views/Elegirnos";
 import { Container } from "react-bootstrap";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Inicio></Inicio>
         <Servicios></Servicios>
         <Ofrecemos></Ofrecemos>
+        <Elegirnos></Elegirnos>
         <About></About>
         <ContactUs></ContactUs>
       </section>
