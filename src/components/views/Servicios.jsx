@@ -67,7 +67,7 @@ const Servicio = () => {
   return (
     <>
       <style>{animationStyles}</style>
-      <section className="services" id="servicio"></section>
+      <section className="services" id="servicios"></section>
       <h2
         className="servicio-title text-center mb-4"
         style={titleStyles}
