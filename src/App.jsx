@@ -10,6 +10,7 @@ import ContactUs from "./components/views/ContactUs";
 import Servicios from './components/views/Servicios';
 import Ofrecemos from "./components/views/Ofrecemos";
 import Elegirnos from "./components/views/Elegirnos";
+import Proyectos from "./components/views/Proyectos";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Servicios></Servicios>
         <Ofrecemos></Ofrecemos>
         <Elegirnos></Elegirnos>
+        <Proyectos></Proyectos>
         <About></About>
         <ContactUs></ContactUs>
       </section>

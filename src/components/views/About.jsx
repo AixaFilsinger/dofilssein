@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <section className="quienesSomos text-center mt-5 mb-5 me-lg-4">
-        <h2 className="subrayado">¿Quienes Somos?</h2>
+        <h2 className="subrayado">¿QUIENES SOMOS?</h2>
         <Container className="mt-5">
           <Row>
             <Col xs={{ order: 2, span: 12 }} md={{ order: 1, span: 6 }}>
