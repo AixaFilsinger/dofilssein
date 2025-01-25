@@ -8,8 +8,8 @@ import { MdOutlineArrowBackIosNew } from "react-icons/md";
 
 const Proyectos = () => {
   return (
-    <Container className="proyectos m-5 text-center ">
-      <h2 className="subrayado m-5">NUESTROS PROYECTOS</h2>
+    <Container className="proyectos mt-5 text-center ">
+      <h2 className="subrayado my-5">NUESTROS PROYECTOS</h2>
       <aside className="d-flex align-items-center justify-content-center"><MdOutlineArrowBackIosNew className="icon-py display-2" />
          <section className="card-proyecto ">
           
