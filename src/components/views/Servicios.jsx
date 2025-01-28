@@ -65,11 +65,11 @@ const Servicio = () => {
   });
 
   return (
-    <>
+    <article className="serviciosf">
       <style>{animationStyles}</style>
       <section className="services" id="servicios"></section>
       <h2
-        className="servicio-title text-center mb-4"
+        className="servicio-title text-center mb-3 mt-5"
         style={titleStyles}
         id="title-services"
       >
@@ -156,7 +156,7 @@ const Servicio = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </article>
   );
 };
 
