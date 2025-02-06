@@ -6,6 +6,7 @@ import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import Inicio from "./components/views/Inicio";
 import About from "./components/views/About";
+import Proyectos from "./components/views/Proyectos";
 import ContactUs from "./components/views/ContactUs";
 import Servicios from "./components/views/Servicios";
 import Ofrecemos from "./components/views/Ofrecemos";
@@ -24,6 +25,7 @@ function App() {
         <Ofrecemos />
         <Elegirnos />
         <About />
+        <Proyectos></Proyectos>
         <div ref={contactRef}>
           <ContactUs />
         </div>
