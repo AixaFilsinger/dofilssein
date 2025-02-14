@@ -36,9 +36,11 @@
     
 }
 footer{
-    background-color: #132f45;
+    background-color: var(--footer-color);
 }
-
+.titulo-py{
+  color: var(--footer-color);
+}
 .subrayado {
     display: inline-block; /* Asegura que el borde se ajuste al texto */
     border-bottom: 3px solid #286291; /* Línea subrayada de color y grosor personalizado */
@@ -70,4 +72,31 @@ footer{
   }
   .vision{
     border-radius: 50% 0 0 50%;
+  }
+
+  .card-proyecto{
+    background: linear-gradient(#ECEFFE, #CED6FB);
+    width: 40%;
+    height: auto;
+    border-radius: 30px;
+  }
+  .img-proyecto{
+    border-radius: 10px;
+  }
+  .p-py{
+    text-align: justify;
+  }
+  .icon-py{
+    margin-top: 2px;
+    color: var(--footer-color);
+  }
+
+  @media (max-width: 768px) {
+    .card-proyecto {
+      width: 100%; /* O cualquier ajuste necesario */
+      height: auto;
+    }
+    .icon-py {
+      font-size: 1.5rem; /* Ajusta el tamaño del ícono */
+    }
   }
