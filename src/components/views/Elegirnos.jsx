@@ -1,12 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRocket } from '@fortawesome/free-solid-svg-icons';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
-
-
+import { faRocket, faCode, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 
 const Elegirnos = () => {
   const titleStyles = {
@@ -42,6 +38,19 @@ const Elegirnos = () => {
       100% {
         width: 100%;
       }
+    }
+
+    /* Animaciones de aparición/desaparición */
+    .card-visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .card-hidden {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
   `;
 
@@ -84,26 +93,37 @@ const Elegirnos = () => {
     margin: "20px auto",  
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const cards = document.querySelectorAll('.card');
+      const windowHeight = window.innerHeight;
+
+      cards.forEach(card => {
+        const cardPosition = card.getBoundingClientRect().top;
+        if (cardPosition < windowHeight - 100) {
+          card.classList.add('card-visible');
+          card.classList.remove('card-hidden');
+        } else {
+          card.classList.add('card-hidden');
+          card.classList.remove('card-visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Llamar a handleScroll en el montaje para que los elementos se verifiquen desde el principio
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <style>
         {animationEstilos}
-        {`
-          #cardd:hover {
-            transform: translateY(-5px);
-            color: #132f45;
-          }
-
-          #cardd:hover::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            height: 3px;
-            background-color:#132f45;
-            animation: subrayadoLento 1.5s forwards ease-out;
-          }
-        `}
       </style>
       <section className="elegir" id="eleg"></section>
       <h2
@@ -118,9 +138,9 @@ const Elegirnos = () => {
         <Row className="gy-4">
           {/* CARD 1 */}
           <Col xs={12} sm={6} md={4}>
-            <Card style={cardEstilos}>
+            <Card className="card card-hidden" style={cardEstilos}>
               <Card.Body style={cardCuerpo}>
-                <Card.Title style={cardTitulo} className="fs-4" id="cardd">
+                <Card.Title style={cardTitulo} className="fs-4">
                   Impulsamos tu negocio
                 </Card.Title>
               </Card.Body>
@@ -134,9 +154,9 @@ const Elegirnos = () => {
           </Col>
           {/* CARD 2 */}
           <Col xs={12} sm={6} md={4}>
-            <Card style={cardEstilos}>
+            <Card className="card card-hidden" style={cardEstilos}>
               <Card.Body style={cardCuerpo}>
-                <Card.Title style={cardTitulo} className="fs-4" id="cardd">
+                <Card.Title style={cardTitulo} className="fs-4">
                   Somos los mejores en sistemas y diseño
                 </Card.Title>
               </Card.Body>
@@ -150,13 +170,13 @@ const Elegirnos = () => {
           </Col>
           {/* CARD 3 */}
           <Col xs={12} sm={6} md={4}>
-            <Card style={cardEstilos}>
+            <Card className="card card-hidden" style={cardEstilos}>
               <Card.Body style={cardCuerpo}>
-                <Card.Title style={cardTitulo} className="fs-4" id="cardd">
+                <Card.Title style={cardTitulo} className="fs-4">
                   Te acompañamos en cada paso
                 </Card.Title>
               </Card.Body>
-              <FontAwesomeIcon icon={faHandHoldingHeart} style={iconEstilos}/>
+              <FontAwesomeIcon icon={faHandHoldingHeart} style={iconEstilos} />
               <Card.Text style={cardTexto} className="fs-5">
                 Desde la idea inicial hasta el lanzamiento, estamos contigo para
                 garantizar que obtengas la mejor solución, optimizada para el
