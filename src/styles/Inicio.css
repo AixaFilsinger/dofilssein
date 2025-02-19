@@ -36,9 +36,10 @@ html, body {
     padding: 1.875rem;
     align-items: center;
     flex-direction: column;
-    height: 90vh;
+    height: 80vh;
     text-align: center;
     background-color: var(--background);
+    z-index: 0;
 }
 
 .home-title {
