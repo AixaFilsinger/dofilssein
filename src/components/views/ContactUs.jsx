@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion"; // Importar motion
 
 function ContactUs({ constactRef }) {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ function ContactUs({ constactRef }) {
   const recaptchaRef = useRef(null);
 
   useEffect(() => {
-    // cargar automaticmante el recaptcha con el script
+    // cargar automáticamente el recaptcha con el script
     const loadRecaptcha = () => {
       const recaptchaScript = document.createElement("script");
       recaptchaScript.src = "https://www.google.com/recaptcha/api.js";
@@ -51,7 +52,6 @@ function ContactUs({ constactRef }) {
       "g-recaptcha-response": recaptchaToken,
     };
 
-
     emailjs
       .send(
         "service_201lake", // ID del servicio
@@ -73,14 +73,21 @@ function ContactUs({ constactRef }) {
   };
 
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact-us">
       <div className="contenedor-titulo">
         <h2 className="title-box">Trabajemos juntos</h2>
         <p className="intro-contact">
           Confía en nosotros para desarrollar tus proyectos.
         </p>
       </div>
-      <div className="contenedor-form">
+
+      {/* Motion component con animación fade-in */}
+      <motion.div
+        className="contenedor-form"
+        initial={{ opacity: 0 }}  // Estado inicial invisible
+        animate={{ opacity: 1 }}  // Estado final visible
+        transition={{ duration: 1 }} // Duración de la animación
+      >
         <form onSubmit={handleSubmit}>
           <p>
             ¡Hola! mi nombre es{" "}
@@ -133,7 +140,7 @@ function ContactUs({ constactRef }) {
           <button type="submit">Enviar</button>
         </form>
         {status && <p className="status-mensaje">{status}</p>}
-      </div>
+      </motion.div>
     </section>
   );
 }

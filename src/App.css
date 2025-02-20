@@ -36,9 +36,11 @@
     
 }
 footer{
-    background-color: #132f45;
+    background-color: var(--footer-color);
 }
-
+.titulo-py{
+  color: var(--footer-color);
+}
 .subrayado {
     display: inline-block; /* Asegura que el borde se ajuste al texto */
     border-bottom: 3px solid #286291; /* Línea subrayada de color y grosor personalizado */

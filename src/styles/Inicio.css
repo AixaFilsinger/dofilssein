@@ -20,6 +20,11 @@
     --txtSmall-px: 0.75rem;
 } 
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
 *{
     font-family: 'Times New Roman', Times, serif
 }

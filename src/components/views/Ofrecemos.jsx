@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
+import { motion } from "framer-motion";
 
 const Ofrecemos = () => {
   const titleStyles = {
@@ -103,66 +104,90 @@ const Ofrecemos = () => {
         {/* CARD 1 */}
         <Row className="gy-4">
           <Col xs={12}>
-            <Card style={cardStyles}>
-              <Card.Body style={cardBody}>
-                <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
-                  1. Presupuesto sin costo
-                </Card.Title>
-                <Card.Text style={cardText} className="fs-5">
-                  Compartinos tu necesidad, y te brindamos una solución
-                  personalizada junto con un presupuesto completamente gratuito.
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }} 
+              whileInView={{ opacity: 1, scale: 1 }} 
+              transition={{ duration: 0.6 }}
+            >
+              <Card style={cardStyles}>
+                <Card.Body style={cardBody}>
+                  <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
+                    1. Presupuesto sin costo
+                  </Card.Title>
+                  <Card.Text style={cardText} className="fs-5">
+                    Compartinos tu necesidad, y te brindamos una solución
+                    personalizada junto con un presupuesto completamente gratuito.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </motion.div>
           </Col>
         </Row>
         {/* CARD 2 */}
         <Row className="gy-4">
           <Col xs={12}>
-            <Card style={cardStyles}>
-              <Card.Body style={cardBody}>
-                <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
-                  2. SEO
-                </Card.Title>
-                <Card.Text style={cardText} className="fs-5">
-                  Desarrollamos sitios con técnicas avanzadas de SEO para
-                  ayudarte a destacar en los primeros resultados de búsqueda.
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }} 
+              whileInView={{ opacity: 1, scale: 1 }} 
+              transition={{ duration: 0.6 }}
+            >
+              <Card style={cardStyles}>
+                <Card.Body style={cardBody}>
+                  <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
+                    2. SEO
+                  </Card.Title>
+                  <Card.Text style={cardText} className="fs-5">
+                    Desarrollamos sitios con técnicas avanzadas de SEO para
+                    ayudarte a destacar en los primeros resultados de búsqueda.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </motion.div>
           </Col>
         </Row>
         {/* CARD 3 */}
         <Row className="gy-4">
           <Col xs={12}>
-            <Card style={cardStyles}>
-              <Card.Body style={cardBody}>
-                <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
-                  3. Google Analytics
-                </Card.Title>
-                <Card.Text style={cardText} className="fs-5">
-                  Con nuestras páginas, tendrás acceso a datos en vivo sobre el
-                  tráfico y comportamiento de los usuarios en tu sitio.
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }} 
+              whileInView={{ opacity: 1, scale: 1 }} 
+              transition={{ duration: 0.6 }}
+            >
+              <Card style={cardStyles}>
+                <Card.Body style={cardBody}>
+                  <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
+                    3. Google Analytics
+                  </Card.Title>
+                  <Card.Text style={cardText} className="fs-5">
+                    Con nuestras páginas, tendrás acceso a datos en vivo sobre el
+                    tráfico y comportamiento de los usuarios en tu sitio.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </motion.div>
           </Col>
         </Row>
         {/* CARD 4 */}
         <Row className="gy-4">
           <Col xs={12}>
-            <Card style={cardStyles}>
-              <Card.Body style={cardBody}>
-                <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
-                  4. Velocidad
-                </Card.Title>
-                <Card.Text style={cardText} className="fs-5">
-                  Creamos páginas web diseñadas para ofrecer tiempos de carga
-                  ultrarrápidos, asegurando la mejor experiencia para tus
-                  visitantes.
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }} 
+              whileInView={{ opacity: 1, scale: 1 }} 
+              transition={{ duration: 0.6 }}
+            >
+              <Card style={cardStyles}>
+                <Card.Body style={cardBody}>
+                  <Card.Title style={cardTitle} className="fs-4 card-title" id="cardtitle1">
+                    4. Velocidad
+                  </Card.Title>
+                  <Card.Text style={cardText} className="fs-5">
+                    Creamos páginas web diseñadas para ofrecer tiempos de carga
+                    ultrarrápidos, asegurando la mejor experiencia para tus
+                    visitantes.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </motion.div>
           </Col>
         </Row>
       </Container>
