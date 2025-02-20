@@ -111,8 +111,6 @@ const Elegirnos = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Llamar a handleScroll en el montaje para que los elementos se verifiquen desde el principio
     handleScroll();
 
     return () => {
