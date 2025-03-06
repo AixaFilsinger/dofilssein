@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
-import { motion } from "framer-motion"; // Importar motion
+import { motion } from "framer-motion";
 
-function ContactUs({ constactRef }) {
+function ContactUs({ contactRef }) {
   const [formData, setFormData] = useState({
     nombre: "",
     asunto: "",
@@ -14,7 +14,6 @@ function ContactUs({ constactRef }) {
   const recaptchaRef = useRef(null);
 
   useEffect(() => {
-    // cargar automáticamente el recaptcha con el script
     const loadRecaptcha = () => {
       const recaptchaScript = document.createElement("script");
       recaptchaScript.src = "https://www.google.com/recaptcha/api.js";
@@ -32,7 +31,6 @@ function ContactUs({ constactRef }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // obtener el token
     const recaptchaToken = document.querySelector(".g-recaptcha-response").value;
 
     if (!recaptchaToken) {
@@ -54,10 +52,10 @@ function ContactUs({ constactRef }) {
 
     emailjs
       .send(
-        "service_201lake", // ID del servicio
-        "contact_form_dfs", // ID de la plantilla
+        "service_201lake",
+        "contact_form_dfs",
         templateParams,
-        "qKy8ASEjZ9zoJlTVT" // Public Key de EmailJS
+        "qKy8ASEjZ9zoJlTVT"
       )
       .then(
         (response) => {
@@ -73,7 +71,7 @@ function ContactUs({ constactRef }) {
   };
 
   return (
-    <section className="contact-section" id="contact-us">
+    <section ref={contactRef} className="contact-section" id="contact-us">
       <div className="contenedor-titulo">
         <h2 className="title-box">Trabajemos juntos</h2>
         <p className="intro-contact">
@@ -81,12 +79,11 @@ function ContactUs({ constactRef }) {
         </p>
       </div>
 
-      {/* Motion component con animación fade-in */}
       <motion.div
         className="contenedor-form"
-        initial={{ opacity: 0 }}  // Estado inicial invisible
-        animate={{ opacity: 1 }}  // Estado final visible
-        transition={{ duration: 1 }} // Duración de la animación
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
         <form onSubmit={handleSubmit}>
           <p>
@@ -127,15 +124,8 @@ function ContactUs({ constactRef }) {
             ></textarea>
             .
           </p>
-          <div
-            className="g-recaptcha"
-            data-sitekey="6LdL98UqAAAAAKC3Mzn2g73s6vuFvTaiywSJrvUN"
-          ></div>
-          <input
-            type="hidden"
-            ref={recaptchaRef}
-            name="g-recaptcha-response"
-          />
+          <div className="g-recaptcha" data-sitekey="6LdL98UqAAAAAKC3Mzn2g73s6vuFvTaiywSJrvUN"></div>
+          <input type="hidden" ref={recaptchaRef} name="g-recaptcha-response" />
 
           <button type="submit">Enviar</button>
         </form>
