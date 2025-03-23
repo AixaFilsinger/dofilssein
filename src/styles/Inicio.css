@@ -43,6 +43,8 @@ html, body {
     z-index: 0;
 }
 
+
+
 .home-title {
     font-size: var(--h1-px);
     margin-bottom: 1rem;
