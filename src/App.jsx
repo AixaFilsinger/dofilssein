@@ -20,13 +20,13 @@ function App() {
     <>
       <Menu contactRef={contactRef} />
       <section className="mainSection">
-        <Inicio></Inicio>
+        <Inicio contactRef={contactRef}></Inicio>
         <Servicios></Servicios>
         <Ofrecemos></Ofrecemos>
         <Elegirnos></Elegirnos>
         <Proyectos></Proyectos>
         <About></About>
-        <ContactUs></ContactUs>
+        <ContactUs contactRef={contactRef}></ContactUs>
       </section>
       <Footer />
     </>

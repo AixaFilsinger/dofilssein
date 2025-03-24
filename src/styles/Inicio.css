@@ -33,14 +33,17 @@ html, body {
     display: flex;
     justify-content: flex-start;
     position: relative;
-    padding: 1.875rem;
+    padding: 3rem;
     align-items: center;
     flex-direction: column;
-    height: 80vh;
+    height: auto;
+    max-height: 80vh;
     text-align: center;
     background-color: var(--background);
     z-index: 0;
 }
+
+
 
 .home-title {
     font-size: var(--h1-px);
@@ -85,6 +88,7 @@ html, body {
     /* Estilos para tabletas */
     .contenedor{
     padding: 3rem;
+    height: 60vh;
     }
 
     .home-title{
@@ -97,6 +101,7 @@ html, body {
     /* Estilos para escritorios */
     .contenedor{
         padding: 4rem;
+        height: 60vh;
     }
 
     .home-title{
